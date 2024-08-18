@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:theme="?attr/toolbar" android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20sp" android:textColor="?attr/album.element.color" android:gravity="center" android:id="@+id/selected_album" android:layout_width="wrap_content" android:layout_height="?attr/actionBarSize" android:foreground="?attr/selectableItemBackground" android:drawableRight="@drawable/ic_arrow_drop_down_white_24dp"/>
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout android:id="@+id/bottom_toolbar" android:background="?attr/bottomToolbar.bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16sp" android:textColor="?attr/bottomToolbar.preview.textColor" android:layout_gravity="start" android:id="@+id/button_preview" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:text="@string/button_preview"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/originalLayout" android:padding="16dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground">
+            <com.zhihu.matisse.internal.ui.widget.CheckRadioView android:layout_gravity="center_vertical" android:id="@+id/original" android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_preview_radio_off"/>
+            <TextView android:enabled="true" android:textSize="14sp" android:textColor="?attr/bottomToolbar.preview.textColor" android:layout_gravity="center_vertical" android:paddingLeft="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_original"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="?attr/bottomToolbar.apply.textColor" android:layout_gravity="end" android:id="@+id/button_apply" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/bottom_toolbar" android:layout_below="@+id/toolbar"/>
+    <FrameLayout android:id="@+id/empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/bottom_toolbar" android:layout_below="@+id/toolbar">
+        <TextView android:textSize="16sp" android:textColor="?attr/album.emptyView.textColor" android:gravity="center" android:layout_gravity="center" android:id="@+id/empty_view_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_text" android:drawableTop="?attr/album.emptyView" android:drawablePadding="8dp"/>
+    </FrameLayout>
+</RelativeLayout>

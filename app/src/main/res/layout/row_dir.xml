@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_document_folder_height"
+    android:background="@drawable/bg_doc_list"
+    android:padding="@dimen/row_padding">
+
+    <LinearLayout
+        android:id="@+id/folder_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/icon_item_folder" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/txt_folder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorItemText"
+            android:textSize="@dimen/list_document_file_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_detail_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_folder_rename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/str_rename"
+            app:srcCompat="@drawable/icon_item_edit" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chk_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/icon_item_check_off" />
+</LinearLayout>

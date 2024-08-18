@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.camscanner.paperscanner.pdfcreator.common.views.draglistview.DragItemRecyclerView xmlns:android="http://schemas.android.com/apk/res/android" android:scrollbars="none|horizontal|vertical" android:layout_width="match_parent" android:layout_height="match_parent"/>

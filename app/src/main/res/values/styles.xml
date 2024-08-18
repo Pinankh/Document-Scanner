@@ -1,0 +1,456 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <declare-styleable name="TouchImageView">
+        <attr name="zoom_enabled" format="boolean">
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Emojicon">
+        <attr name="emojiconSize" format="dimension" />
+        <attr name="emojiconAlignment" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="baseline" value="1" />
+        </attr>
+        <attr name="emojiconTextStart" format="integer" />
+        <attr name="emojiconTextLength" format="integer" />
+        <attr name="emojiconUseSystemDefault" format="boolean" />
+    </declare-styleable>
+
+
+    <style name="Matisse_TapScanner">
+        <item name="android:listPopupWindowStyle">@style/Popup_TapScanner</item>
+        <item name="album.dropdown.count.color">@color/colorTextScanner</item>
+        <item name="album.dropdown.title.color">@color/colorTextScanner</item>
+        <item name="album.element.color">@android:color/white</item>
+        <item name="album.emptyView">@drawable/ic_empty_dracula</item>
+        <item name="album.emptyView.textColor">@color/dracula_album_empty_view</item>
+        <item name="album.thumbnail.placeholder">@color/colorTextScanner</item>
+        <item name="bottomToolbar.apply.textColor">@color/white</item>
+        <item name="bottomToolbar.bg">@color/colorPrimaryDark</item>
+        <item name="bottomToolbar.preview.textColor">@color/white</item>
+        <item name="capture.textColor">#ffffffff</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="item.checkCircle.backgroundColor">@color/splash_bg</item>
+        <item name="item.checkCircle.borderColor">#ffffffff</item>
+        <item name="item.placeholder">@color/colorBackgroundFooter</item>
+        <item name="listPopupWindowStyle">@style/Popup_TapScanner</item>
+        <item name="page.bg">@color/doc_background</item>
+        <item name="preview.bottomToolbar.apply.textColor">@color/white</item>
+        <item name="preview.bottomToolbar.back.textColor">#ffffffff</item>
+        <item name="toolbar">@style/Toolbar.Dracula</item>
+    </style>
+    <style name="Popup_TapScanner">
+        <item name="android:popupBackground">@color/colorBackgroundFooter</item>
+    </style>
+
+    <style name="MainAppTheme.AppBarOverlay">
+    </style>
+
+    <style name="MainAppTheme.PopupOverlay">
+
+    </style>
+
+    <style name="SettingSubtitleText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CameraToolButton">
+        <item name="android:background">@drawable/background_button_tool</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="CameraToolImage">
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+    <style name="CameraToolText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorTextScanner</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <declare-styleable name="TagsEditText">
+        <attr name="allowSpaceInTag" format="boolean"/>
+        <attr name="tagsTextColor" format="color"/>
+        <attr name="tagsTextSize" format="dimension"/>
+        <attr name="tagsBackground" format="integer"/>
+        <attr name="tagsCloseImageLeft" format="integer"/>
+        <attr name="tagsCloseImageRight" format="integer"/>
+        <attr name="tagsCloseImagePadding" format="dimension" />
+        <attr name="tagsPaddingLeft" format="dimension"/>
+        <attr name="tagsPaddingRight" format="dimension"/>
+        <attr name="tagsPaddingTop" format="dimension"/>
+        <attr name="tagsPaddingBottom" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ListSwipeItem">
+        <attr name="swipeViewId" format="integer"/>
+        <attr name="leftViewId" format="integer"/>
+        <attr name="rightViewId" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="scv_CropImageView">
+        <attr format="reference" name="scv_img_src"/>
+        <attr name="scv_crop_mode">
+            <enum name="fit_image" value="0"/>
+            <enum name="ratio_4_3" value="1"/>
+            <enum name="ratio_3_4" value="2"/>
+            <enum name="square" value="3"/>
+            <enum name="ratio_16_9" value="4"/>
+            <enum name="ratio_9_16" value="5"/>
+            <enum name="free" value="6"/>
+            <enum name="custom" value="7"/>
+            <enum name="circle" value="8"/>
+            <enum name="circle_square" value="9"/>
+        </attr>
+        <attr format="reference|color" name="scv_background_color"/>
+        <attr format="reference|color" name="scv_overlay_color"/>
+        <attr format="reference|color" name="scv_frame_color"/>
+        <attr format="reference|color" name="scv_handle_color"/>
+        <attr format="reference|color" name="scv_guide_color"/>
+        <attr name="scv_guide_show_mode">
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
+        </attr>
+        <attr name="scv_handle_show_mode">
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
+        </attr>
+        <attr format="dimension" name="scv_handle_size"/>
+        <attr format="dimension" name="scv_touch_padding"/>
+        <attr format="dimension" name="scv_min_frame_size"/>
+        <attr format="dimension" name="scv_frame_stroke_weight"/>
+        <attr format="dimension" name="scv_guide_stroke_weight"/>
+        <attr format="boolean" name="scv_crop_enabled"/>
+        <attr format="float" name="scv_initial_frame_scale"/>
+        <attr format="boolean" name="scv_animation_enabled"/>
+        <attr format="integer" name="scv_animation_duration"/>
+        <attr format="boolean" name="scv_handle_shadow_enabled"/>
+    </declare-styleable>
+
+    <style name="ProgressBar">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="EditFooterText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorTextScanner</item>
+    </style>
+
+    <style name="MainFooterImage">
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="MainFooterText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorTextScanner</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <declare-styleable name="VerticalSeekBar">
+        <attr name="vsb_background_dark" format="reference">
+        </attr>
+        <attr name="vsb_background_light" format="reference">
+        </attr>
+        <attr name="vsb_color_done" format="reference|color">
+        </attr>
+        <attr name="vsb_color_remaining_dark" format="reference|color">
+        </attr>
+        <attr name="vsb_color_remaining_light" format="reference|color">
+        </attr>
+        <attr name="vsb_dark_mode" format="boolean">
+        </attr>
+        <attr name="vsb_margin_bottom_dist_percent" format="float">
+        </attr>
+        <attr name="vsb_margin_bottom_property_percent" format="float">
+        </attr>
+        <attr name="vsb_margin_top_dist_percent" format="float">
+        </attr>
+        <attr name="vsb_progress" format="integer">
+        </attr>
+        <attr name="vsb_property_percent" format="float">
+        </attr>
+        <attr name="vsb_property_src" format="reference">
+        </attr>
+        <attr name="vsb_thumb_color" format="reference|color">
+        </attr>
+        <attr name="vsb_thumb_radius_percent" format="float">
+        </attr>
+        <attr name="vsb_thumb_radius_shadow" format="reference|dimension">
+        </attr>
+        <attr name="vsb_track_width" format="reference|dimension">
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StepSlider">
+        <attr name="ss_margin_text" format="reference|dimension">
+        </attr>
+        <attr name="ss_position" format="integer">
+        </attr>
+        <attr name="ss_prem_src" format="reference">
+        </attr>
+        <attr name="ss_step" format="integer">
+        </attr>
+        <attr name="ss_str_array" format="reference">
+        </attr>
+        <attr name="ss_text_color" format="reference|color">
+        </attr>
+        <attr name="ss_text_selected_color" format="reference|color">
+        </attr>
+        <attr name="ss_text_size_deselected" format="reference|dimension">
+        </attr>
+        <attr name="ss_text_size_selected" format="reference|dimension">
+        </attr>
+        <attr name="ss_thumb_bg_color" format="reference|color">
+        </attr>
+        <attr name="ss_thumb_bg_radius" format="reference|dimension">
+        </attr>
+        <attr name="ss_thumb_color" format="reference|color">
+        </attr>
+        <attr name="ss_thumb_radius" format="reference|dimension">
+        </attr>
+        <attr name="ss_track_bg_color" format="reference|color">
+        </attr>
+        <attr name="ss_track_bg_height" format="reference|dimension">
+        </attr>
+        <attr name="ss_track_color" format="reference|color">
+        </attr>
+        <attr name="ss_track_height" format="reference|dimension">
+        </attr>
+    </declare-styleable>
+
+    <style name="MaterialSearchViewStyle">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:hint">@string/search_hint</item>
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back</item>
+        <item name="searchBackground">@color/colorWhite</item>
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close</item>
+        <item name="searchSuggestionBackground">@android:color/white</item>
+        <item name="searchSuggestionIcon">@drawable/ic_suggestion</item>
+        <item name="searchVoiceIcon">@drawable/ic_action_voice_search</item>
+    </style>
+    <style name="SignFooterText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorTextScanner</item>
+    </style>
+
+    <style name="PassiveRateButton">
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/appbid_primaryColor</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:background">@drawable/appbid_btn_background</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+    <style name="ProgressStyle">
+        <item name="colorAccent">@color/appbid_primaryColor</item>
+    </style>
+
+    <style name="WakeUpTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorAccent">@color/wakeads_colorPrimary</item>
+        <item name="colorPrimary">@color/wakeads_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/wakeads_colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Clickable">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="SimpleButton">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="OptionMenuStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#fefefe</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">clip_horizontal</item>
+        <item name="android:background">@drawable/bg_menu</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">2dp</item>
+    </style>
+
+    <declare-styleable name="AndroidTagView">
+        <attr name="vertical_interval" format="dimension" />
+        <attr name="horizontal_interval" format="dimension" />
+
+        <attr name="container_border_width" format="dimension" />
+        <attr name="container_border_radius" format="dimension" />
+        <attr name="container_border_color" format="color" />
+        <attr name="container_background_color" format="color" />
+        <attr name="container_enable_drag" format="boolean" />
+        <attr name="container_drag_sensitivity" format="float" />
+        <attr name="container_max_lines" format="integer" />
+        <attr name="container_gravity" format="enum">
+            <enum name="left" value="3" />
+            <enum name="center" value="17" />
+            <enum name="right" value="5" />
+        </attr>
+
+        <attr name="tag_border_width" format="dimension" />
+        <attr name="tag_corner_radius" format="dimension" />
+        <attr name="tag_horizontal_padding" format="dimension" />
+        <attr name="tag_vertical_padding" format="dimension" />
+        <attr name="tag_text_size" format="dimension" />
+        <attr name="tag_bd_distance" format="dimension" />
+        <attr name="tag_text_color" format="color" />
+        <attr name="tag_border_color" format="color" />
+        <attr name="tag_background_color" format="color" />
+        <attr name="tag_max_length" format="integer" />
+        <attr name="tag_clickable" format="boolean" />
+        <attr name="tag_selectable" format="boolean" />
+        <attr name="tag_theme" format="enum">
+            <enum name="none" value="-1" />
+            <enum name="random" value="0" />
+            <enum name="pure_cyan" value="1" />
+            <enum name="pure_teal" value="2" />
+        </attr>
+        <attr name="tag_text_direction" format="enum">
+            <enum name="ltr" value="3" />
+            <enum name="rtl" value="4" />
+        </attr>
+        <attr name="tag_enable_check" format="boolean">
+        </attr>
+        <attr name="tag_ripple_color" format="color" />
+        <attr name="tag_ripple_alpha" format="integer" />
+        <attr name="tag_ripple_duration" format="integer" />
+
+        <attr name="tag_enable_cross" format="boolean" />
+        <attr name="tag_enable_chack" format="boolean" />
+        <attr name="tag_cross_width" format="dimension" />
+        <attr name="tag_check_width" format="dimension" />
+        <attr name="tag_check_area_padding" format="dimension" />
+        <attr name="tag_cross_color" format="color" />
+        <attr name="tag_check_color" format="color" />
+        <attr name="tag_cross_line_width" format="dimension" />
+        <attr name="tag_check_line_width" format="dimension" />
+        <attr name="tag_cross_area_padding" format="dimension" />
+        <attr name="tag_support_letters_rlt" format="boolean" />
+        <attr name="tag_background" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="leftDrawable" format="reference|color"/>
+        <attr name="rightDrawable" format="reference|color"/>
+        <attr name="topDrawable" format="reference|color"/>
+        <attr name="bottomDrawable" format="reference|color"/>
+
+        <attr name="drawableLeftCompat" format="reference">
+        </attr>
+        <attr name="drawableRightCompat" format="reference">
+        </attr>
+        <attr name="drawableSize" format="dimension">
+        </attr>
+        <attr name="drawableTopCompat" format="reference">
+        </attr>
+        <attr name="drawableBottomCompat" format="reference">
+        </attr>
+
+        <attr name="leftDrawableWidth" format="reference|dimension"/>
+        <attr name="rightDrawableWidth" format="reference|dimension"/>
+        <attr name="topDrawableWidth" format="reference|dimension"/>
+        <attr name="bottomDrawableWidth" format="reference|dimension"/>
+
+        <attr name="leftDrawableHeight" format="reference|dimension"/>
+        <attr name="rightDrawableHeight" format="reference|dimension"/>
+        <attr name="topDrawableHeight" format="reference|dimension"/>
+        <attr name="bottomDrawableHeight" format="reference|dimension"/>
+    </declare-styleable>
+
+    <style name="SplashTheme">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/splash_bg</item>
+    </style>
+
+    <declare-styleable name="CameraBridgeViewBase">
+        <attr name="camera_id" format="integer">
+            <enum name="any" value="-1" />
+            <enum name="back" value="99" />
+            <enum name="front" value="98" />
+        </attr>
+        <attr name="show_fps" format="boolean">
+        </attr>
+    </declare-styleable>
+
+    <style name="AppTheme.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">#FFCC66</item>
+        <item name="android:width">15dp</item>
+        <item name="android:height">15dp</item>
+    </style>
+
+    <style name="customRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0dp</item>
+
+        <item name="cornerSizeBottomLeft">15dp</item>
+        <item name="cornerSizeTopLeft">15dp</item>
+    </style>
+    <style name="customRounded15ImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="customRounded50ImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+    <style name="customRounded35ImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">35dp</item>
+    </style>
+
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/background_sheet</item>
+    </style>
+
+</resources>

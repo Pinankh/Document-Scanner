@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_create_folder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/touch_effect"
+        android:contentDescription="@string/action_create_new_folder"
+        app:srcCompat="@drawable/icon_toolbar_folder" />
+
+    <ImageButton
+        android:id="@+id/btn_tag"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/touch_effect"
+        android:contentDescription="@string/str_search"
+        android:visibility="gone"
+        app:srcCompat="@drawable/icon_toolbar_tag" />
+
+    <ImageButton
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/touch_effect"
+        android:contentDescription="@string/str_search"
+        app:srcCompat="@drawable/icon_toolbar_search" />
+
+    <ImageButton
+        android:id="@+id/btn_sort"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/touch_effect"
+        android:contentDescription="@string/str_sort_by"
+        app:srcCompat="@drawable/ic_icon_toolbar_sort" />
+
+    <ImageButton
+        android:id="@+id/btn_multi"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/touch_effect"
+        android:contentDescription="@string/str_delete"
+        app:srcCompat="@drawable/icon_toolbar_choice" />
+</LinearLayout>

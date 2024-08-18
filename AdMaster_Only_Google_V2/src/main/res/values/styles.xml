@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="UserDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="saveDialog">
+        <!-- Color palette -->
+        <item name="colorPrimary">#fff5f5f5</item>
+        <item name="colorPrimaryDark">#D10C0C</item>
+        <item name="colorAccent">#ff008577</item>
+        <item name="colorError">#ff5722</item>
+
+        <!-- Dialog attributes -->
+        <item name="dialogCornerRadius">2dp</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">2dp</item>
+
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_back_long" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_gravity="center_vertical"></TextView>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+       >
+
+        <com.ortiz.touchview.TouchImageView
+            android:id="@+id/image_preview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tune_alert"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/alert_bg"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,3:2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:id="@+id/tune_value"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:textColor="@color/alert_text"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:layout_constraintWidth_percent="0.7" />
+
+                <TextView
+                    android:id="@+id/tune_title"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:textColor="@color/alert_text"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/tune_value"
+                    app:layout_constraintHeight_percent="0.32"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tune_value"
+                    app:layout_constraintWidth_percent="0.69" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.camscanner.paperscanner.pdfcreator.common.views.verticalseekbar.VerticalSeekBar
+            android:id="@+id/tune_brightness"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:minWidth="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="W,44:321"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:vsb_background_dark="@drawable/ic_edit_bg_dark_left"
+            app:vsb_background_light="@drawable/ic_edit_bg_light_left"
+            app:vsb_color_done="@color/white"
+            app:vsb_color_remaining_dark="@color/remaining_track_dark"
+            app:vsb_color_remaining_light="@color/remaining_track_light"
+            app:vsb_dark_mode="false"
+            app:vsb_margin_bottom_dist_percent="0.23"
+            app:vsb_margin_bottom_property_percent="0.09"
+            app:vsb_margin_top_dist_percent="0.14"
+            app:vsb_property_percent="0.33"
+            app:vsb_property_src="@drawable/ic_prop_brightness"
+            app:vsb_thumb_color="@color/white"
+            app:vsb_thumb_radius_percent="0.28"
+            app:vsb_thumb_radius_shadow="3dp"
+            app:vsb_track_width="5dp" />
+
+        <com.camscanner.paperscanner.pdfcreator.common.views.verticalseekbar.VerticalSeekBar
+            android:id="@+id/tune_contrast"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:minWidth="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="W,44:321"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:vsb_background_dark="@drawable/ic_edit_bg_dark_right"
+            app:vsb_background_light="@drawable/ic_edit_bg_light_right"
+            app:vsb_color_done="@color/white"
+            app:vsb_color_remaining_dark="@color/remaining_track_dark"
+            app:vsb_color_remaining_light="@color/remaining_track_light"
+            app:vsb_dark_mode="false"
+            app:vsb_margin_bottom_dist_percent="0.23"
+            app:vsb_margin_bottom_property_percent="0.09"
+            app:vsb_margin_top_dist_percent="0.14"
+            app:vsb_property_percent="0.33"
+            app:vsb_property_src="@drawable/ic_prop_contrast"
+            app:vsb_thumb_color="@color/white"
+            app:vsb_thumb_radius_percent="0.28"
+            app:vsb_track_width="5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/background_filters"
+        android:paddingBottom="@dimen/activity_horizontal_margin">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizontal_filter_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_menu_left"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_filters_left" />
+
+        <ImageView
+            android:id="@+id/iv_menu_right"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_filters_right" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:background="@color/colorBackgroundFooter">
+
+
+        <LinearLayout
+            android:id="@+id/btn_rotate_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/background_button_tool"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_back"
+            app:layout_constraintRight_toLeftOf="@+id/btn_settings"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/MainFooterImage"
+                android:layout_width="@dimen/size_footer_icon_main"
+                android:layout_height="@dimen/size_footer_icon_main"
+                app:srcCompat="@drawable/icon_ocr_rotate" />
+
+            <TextView
+                style="@style/MainFooterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_ocr_rotate" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_settings"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/background_button_tool"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_rotate_left"
+            app:layout_constraintRight_toLeftOf="@+id/btn_ocr"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/MainFooterImage"
+                android:layout_width="@dimen/size_footer_icon_main"
+                android:layout_height="@dimen/size_footer_icon_main"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/icon_ocr_edit" />
+
+            <TextView
+                style="@style/MainFooterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/str_ocr_edit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_ocr"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/background_button_tool"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toRightOf="@+id/btn_settings"
+            app:layout_constraintRight_toLeftOf="@+id/btn_done"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/MainFooterImage"
+                android:layout_width="@dimen/size_footer_icon_main"
+                android:layout_height="@dimen/size_footer_icon_main"
+                app:srcCompat="@drawable/icon_ocr_recognize_color" />
+
+            <TextView
+                style="@style/MainFooterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_ocr_recognize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_done"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/background_button_tool"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn_ocr"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/MainFooterImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_icon_ocr_save" />
+
+            <TextView
+                style="@style/MainFooterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_ocr_save" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</LinearLayout>

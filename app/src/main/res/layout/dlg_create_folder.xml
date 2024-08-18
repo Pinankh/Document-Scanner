@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/txt_create_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/create_new_folder"
+        android:hint="@string/str_folder_hint" />
+
+    <requestFocus />
+
+    <TextView
+        android:id="@+id/txt_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:text="@string/error_invalid_character"
+        android:textColor="@color/colorRed"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    
+    <LinearLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_back_long" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Display &amp; PDF"
+            android:textColor="@color/white"
+            android:textSize="18dp"></TextView>
+        
+    </LinearLayout>
+  
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:fillViewport="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rl_preview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/appbar"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/iv_preview"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H, 130:100"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.45"
+                    app:srcCompat="@drawable/ic_quality" />
+
+                <TextView
+                    android:id="@+id/text_value_vert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="70%"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_preview"
+                    app:layout_constraintLeft_toRightOf="@+id/vert_guidline"
+                    app:layout_constraintRight_toRightOf="@+id/vert_guidline"
+                    app:layout_constraintTop_toTopOf="@+id/iv_preview"
+                    app:layout_constraintVertical_bias="0.45" />
+
+                <TextView
+                    android:id="@+id/text_value_horiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="70%"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_preview"
+                    app:layout_constraintHorizontal_bias="0.45"
+                    app:layout_constraintLeft_toLeftOf="@+id/iv_preview"
+                    app:layout_constraintRight_toRightOf="@+id/iv_preview"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_preview" />
+
+                <View
+                    android:id="@+id/vert_guidline"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_preview"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_preview"
+                android:background="@color/colorSettingBackground1"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/SettingSubtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/setting_img_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_img_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <com.camscanner.paperscanner.pdfcreator.common.views.stepslider.StepSlider
+                    android:id="@+id/sld_img_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    app:ss_margin_text="18dp"
+                    app:ss_position="2"
+                    app:ss_prem_src="@drawable/trans"
+                    app:ss_step="3"
+                    app:ss_str_array="@array/setting_share_quality_array"
+                    app:ss_text_color="@color/colorTextScanner"
+                    app:ss_text_selected_color="@color/colorPrimary"
+                    app:ss_text_size_deselected="12sp"
+                    app:ss_text_size_selected="12sp"
+                    app:ss_thumb_bg_color="@color/colorPrimary"
+                    app:ss_thumb_bg_radius="10dp"
+                    app:ss_thumb_radius="14dp"
+                    app:ss_track_bg_height="3dp"
+                    app:ss_track_color="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorSettingBackground1">
+
+                <TextView
+                    style="@style/SettingSubtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/setting_new_doc" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorBGGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_display_name_tag"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_name_template"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorSettingItemColor2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/icon_setting_next" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorBGGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_display_name_tag_set"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_tag_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/square_default"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/setting_name_tag_tag"
+                    android:textColor="@color/defaultTagsTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_tag_seperatre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_tag_icon"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/tv_tag_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_tag_seperatre" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/icon_setting_next" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorBGGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorSettingBackground1">
+
+                <TextView
+                    style="@style/SettingSubtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/setting_pdf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorBGGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_display_pdf_size"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:text="@string/setting_pdf_size"
+                    android:textColor="@color/colorSettingItemColor2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/icon_setting_next" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorBGGray" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

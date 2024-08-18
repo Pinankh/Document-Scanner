@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.camscanner.paperscanner.pdfcreator">
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>-->
+   <!-- <uses-permission android:name="com.android.vending.BILLING"/>-->
+    <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVfE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:name="com.camscanner.paperscanner.pdfcreator.ScanApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MainAppTheme">
+
+       <!-- <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.camscanner.paperscanner.pdfcreator.files" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>-->
+
+
+        <activity android:label="@string/app_name" android:name="com.camscanner.paperscanner.pdfcreator.view.activity.main.MainActivity" android:screenOrientation="portrait" >
+
+        </activity>
+
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.AboutUsActivity">
+
+        </activity>
+        <activity  android:name="com.camscanner.paperscanner.pdfcreator.view.activity.login.SplashActivity" android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:label="Crop Screen" android:name="com.camscanner.paperscanner.pdfcreator.view.crop.CropImageActivity" android:screenOrientation="portrait"/>
+        <activity android:label="Crop Effect" android:name="com.camscanner.paperscanner.pdfcreator.view.activity.CropImageEffectActivity" android:screenOrientation="portrait"/>
+        <activity android:label="Edit Filters" android:name="com.camscanner.paperscanner.pdfcreator.view.activity.EditFiltersActivity" android:screenOrientation="portrait"/>
+        <activity android:label="GridMode Activity" android:name="com.camscanner.paperscanner.pdfcreator.view.activity.GridModeLayoutActivity" android:exported="true" android:screenOrientation="portrait"/>
+        <activity android:label="Edit Activity" android:name="com.camscanner.paperscanner.pdfcreator.view.activity.EditImageActivity" android:screenOrientation="portrait"/>
+        <activity android:label="Folder Activity" android:name="com.camscanner.paperscanner.pdfcreator.view.activity.FolderMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="Camera Activity" android:name="com.camscanner.paperscanner.pdfcreator.view.camera.CameraOpenActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.PDFViewImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyScanActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyDisplayActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyNameTagActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MySingleScanActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyBatchScanActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyPDFSizeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyPDFSizeItemActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyDocPropertyActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.setting.Setting_MyLanguageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.features.barcode.presentation.BarcodeScannerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.features.barcode.presentation.BarcodeResultActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.features.barcode.presentation.BarcodeHistoryActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.features.ocr.presentation.OCRActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.features.ocr.presentation.OCRResultActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize|adjustPan|adjustNothing"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.signature.SignPadActivity" android:screenOrientation="landscape"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.signature.SignAddActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.signature.SignCropActivity"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.signature.SignEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.camscanner.paperscanner.pdfcreator.view.activity.signature.SignDateActivity" android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+    </application>
+
+</manifest>

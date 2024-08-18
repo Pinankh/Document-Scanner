@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back_long" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ocr"
+                android:textColor="@color/whiteTitle"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/select_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:text="@string/ocr_select_document_language"
+        android:textColor="@color/colorTextScanner"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+    <EditText
+        android:id="@+id/language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/background_ocr_language_closed"
+        android:focusable="true"
+        android:hint="@string/ocr_select_language"
+        android:paddingLeft="24dp"
+        android:paddingTop="8dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/colorTextScanner"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_language" />
+
+    <ImageView
+        android:id="@+id/btn_open"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/language"
+        app:layout_constraintDimensionRatio="H,1616:1000"
+        app:layout_constraintRight_toRightOf="@+id/language"
+        app:layout_constraintTop_toTopOf="@+id/language"
+        app:srcCompat="@drawable/ic_ocr_arrow_down" />
+
+    <TextView
+        android:id="@+id/how_many"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/how_many_columns"
+        android:textColor="@color/colorTextScanner"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/language" />
+
+    <ImageView
+        android:id="@+id/btn_one_column"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintDimensionRatio="H,70.17:65.52"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_many_columns"
+        app:layout_constraintTop_toBottomOf="@+id/how_many"
+        app:layout_constraintWidth_percent="0.187"
+        app:srcCompat="@drawable/ic_ocr_one" />
+
+    <ImageView
+        android:id="@+id/btn_many_columns"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_one_column"
+        app:layout_constraintDimensionRatio="H,73.5:66.52"
+        app:layout_constraintLeft_toRightOf="@+id/btn_one_column"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_one_column"
+        app:layout_constraintWidth_percent="0.196"
+        app:srcCompat="@drawable/ic_ocr_many" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/ocr_lang_column_one"
+        android:textColor="@color/colorTextScanner"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_one_column"
+        app:layout_constraintRight_toRightOf="@+id/btn_one_column"
+        app:layout_constraintTop_toBottomOf="@+id/btn_one_column" />
+
+    <TextView
+        android:id="@+id/many"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/ocr_lang_column_more_than_one"
+        android:textColor="@color/colorTextScanner"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_many_columns"
+        app:layout_constraintRight_toRightOf="@+id/btn_many_columns"
+        app:layout_constraintTop_toBottomOf="@+id/btn_many_columns" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_ocr_language"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="1dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_process"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintLeft_toLeftOf="@+id/language"
+        app:layout_constraintRight_toRightOf="@+id/language"
+        app:layout_constraintTop_toBottomOf="@+id/language"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/btn_process"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/background_button_primary_disabled"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/process_document"
+        android:textColor="@color/whiteTitle"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_process"
+        app:layout_constraintRight_toRightOf="@+id/btn_process"
+        app:layout_constraintTop_toTopOf="@+id/btn_process"
+        app:srcCompat="@drawable/ic_forward_long" />
+</androidx.constraintlayout.widget.ConstraintLayout>

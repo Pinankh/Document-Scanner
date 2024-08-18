@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_tag" android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/tv_tag_mark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="T" android:layout_centerVertical="true" android:textAllCaps="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/colorSettingItemColor2" android:id="@+id/tv_tag_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:text="Tag Name" android:layout_centerVertical="true"/>
+        <ImageView android:id="@+id/iv_tag_edit" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toLeftOf="@+id/iv_tag_delete" android:layout_centerVertical="true" app:srcCompat="@drawable/ic_edit_new_color"/>
+        <ImageView android:id="@+id/iv_tag_delete" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="16dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:srcCompat="@drawable/ic_delete_new"/>
+        <View android:background="@color/colorBGGray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

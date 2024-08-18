@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/crop_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ff242424">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MainAppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    app:popupTheme="@style/MainAppTheme.PopupOverlay">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/btn_back_top"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:contentDescription="@string/back"
+                            android:padding="8dp"
+                            app:srcCompat="@drawable/ic_back_long" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.camscanner.paperscanner.pdfcreator.common.views.simplecropview.SimpleCropImageView
+                android:id="@+id/iv_crop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:scv_background_color="@color/windowBackground"
+                app:scv_crop_mode="free"
+                app:scv_frame_color="@color/color_valid_stroke"
+                app:scv_frame_stroke_weight="1dp"
+                app:scv_guide_color="@color/colorWhite"
+                app:scv_guide_stroke_weight="1dp"
+                app:scv_handle_size="@dimen/crop_dot_radius"
+                app:scv_overlay_color="@color/overlay"
+                app:scv_touch_padding="16dp" />
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/footer_height"
+                android:background="@color/colorBackgroundFooter"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/btn_rotate_left"
+                    style="@style/CameraToolButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_tool"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/CameraToolImage"
+                        android:layout_width="@dimen/size_tool_image_crop"
+                        android:layout_height="@dimen/size_tool_image_crop"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_rotate_l" />
+
+                    <TextView
+                        style="@style/CameraToolText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/rotate_l" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_rotate_right"
+                    style="@style/CameraToolButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_tool"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/CameraToolImage"
+                        android:layout_width="@dimen/size_tool_image_crop"
+                        android:layout_height="@dimen/size_tool_image_crop"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_rotate_r" />
+
+                    <TextView
+                        style="@style/CameraToolText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/rotate_r" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_crop"
+                    style="@style/CameraToolButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_tool"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_crop"
+                        style="@style/CameraToolImage"
+                        android:layout_width="@dimen/size_tool_image_crop"
+                        android:layout_height="@dimen/size_tool_image_crop"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_recrop_increase" />
+
+                    <TextView
+                        style="@style/CameraToolText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/recrop" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_done"
+                    style="@style/CameraToolButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_tool"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/CameraToolImage"
+                        android:layout_width="@dimen/size_tool_image_crop"
+                        android:layout_height="@dimen/size_tool_image_crop"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_finish" />
+
+                    <TextView
+                        style="@style/CameraToolText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_sign_edit_finish" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_mag_left"
+            android:layout_width="@dimen/margin_mag_side"
+            android:layout_height="@dimen/margin_mag_side"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="76dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</LinearLayout>

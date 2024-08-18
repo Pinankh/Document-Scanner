@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_vert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/frame"
+        android:layout_width="600dp"
+        android:layout_height="650dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guid_horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/guid_vert"
+        app:layout_constraintRight_toRightOf="@+id/guid_vert"
+        app:layout_constraintTop_toTopOf="@+id/guid_horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reveal_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/background_tutorial"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/filters"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/title_guidline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="48dp"
+                android:text="@string/tutorial_message_filters"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/filters"
+                app:layout_constraintLeft_toLeftOf="@+id/filters" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tutorial_title_filters"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/message"
+                app:layout_constraintLeft_toLeftOf="@+id/message" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </io.codetail.widget.RevealFrameLayout>
+
+    <ImageView
+        android:id="@+id/filters_outside"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/guid_horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/guid_vert"
+        app:layout_constraintRight_toRightOf="@+id/guid_vert"
+        app:layout_constraintTop_toTopOf="@+id/guid_horizontal" />
+</androidx.constraintlayout.widget.ConstraintLayout>

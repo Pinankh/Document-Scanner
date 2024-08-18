@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<!--    <item-->
+<!--        android:id="@+id/nav_signature"-->
+<!--        android:icon="@drawable/ic_drawer_sign"-->
+<!--        android:title="@string/str_sign_nav" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/nav_hd_quality"-->
+<!--        android:icon="@drawable/icon_nav_hd_quality"-->
+<!--        android:title="@string/premium_feature_hd_quality"-->
+<!--        app:actionLayout="@layout/item_nav_hd_switch" />-->
+    <item
+        android:id="@+id/nav_rate_us"
+        android:icon="@drawable/ic_drawer_rateus"
+        android:title="@string/nav_rate_us" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_drawer_settings"
+        android:title="@string/nav_setting" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share_black"
+        android:title="Share" />
+    <item
+        android:id="@+id/nav_privacy"
+        android:icon="@drawable/ic_privacy"
+        android:title="Privacy Policy" />
+
+<!--    <item-->
+<!--        android:id="@+id/nav_contact_us"-->
+<!--        android:icon="@drawable/ic_contact_us"-->
+<!--        android:title="@string/nav_contact_us" />-->
+
+</menu>

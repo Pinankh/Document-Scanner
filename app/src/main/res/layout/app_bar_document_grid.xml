@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MainAppTheme.AppBarOverlay">
+
+                <FrameLayout
+                    android:id="@+id/toolbar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/colorPrimary"
+                        app:contentInsetEnd="0dp"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetRight="0dp"
+                        app:contentInsetStart="0dp"
+                        app:popupTheme="@style/MainAppTheme.PopupOverlay">
+
+                        <ImageView
+                            android:id="@+id/btn_menu"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_menu_main" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <com.miguelcatalan.materialsearchview.MaterialSearchView
+                        android:id="@+id/search_view"
+                        style="@style/MaterialSearchViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        android:id="@+id/multi_select_bar"
+                        layout="@layout/multi_select_bar" />
+                </FrameLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

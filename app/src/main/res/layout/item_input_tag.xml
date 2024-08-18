@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tag_input"
+    android:hint="@string/tag_input_hint"
+    android:maxLength="20"
+    android:paddingLeft="8dp"
+    android:paddingTop="6dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="6dp"
+    android:singleLine="true"
+    android:textColor="@color/black87"
+    android:textSize="16sp" />

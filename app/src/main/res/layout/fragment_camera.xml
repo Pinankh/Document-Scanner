@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.camscanner.paperscanner.pdfcreator.view.camera.SquareCameraPreview
+        android:id="@+id/camera_preview_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer_tools"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.camscanner.paperscanner.pdfcreator.view.camera.GridView
+        android:id="@+id/vw_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_preview_view"
+        app:layout_constraintLeft_toLeftOf="@+id/camera_preview_view"
+        app:layout_constraintRight_toRightOf="@+id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@+id/camera_preview_view" />
+
+    <TextView
+        android:id="@+id/tv_alert_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_preview_view"
+        app:layout_constraintLeft_toLeftOf="@+id/camera_preview_view"
+        app:layout_constraintRight_toRightOf="@+id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@+id/camera_preview_view" />
+
+    <com.camscanner.paperscanner.pdfcreator.view.camera.DrawingView
+        android:id="@+id/drawing_surface"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_preview_view"
+        app:layout_constraintLeft_toLeftOf="@+id/camera_preview_view"
+        app:layout_constraintRight_toRightOf="@+id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@+id/camera_preview_view" />
+
+    <View
+        android:id="@+id/cover_top_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/squarecamera_cover_start_height"
+        android:background="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_preview_view" />
+
+    <View
+        android:id="@+id/cover_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/squarecamera_cover_start_height"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_preview_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/footer_tools"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/footer_size_camera"
+        android:background="@color/colorBackgroundFooter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_take_photo"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_floating_button"
+        app:layout_constraintBottom_toBottomOf="@+id/footer_tools"
+        app:layout_constraintLeft_toLeftOf="@+id/footer_tools"
+        app:layout_constraintRight_toRightOf="@+id/footer_tools"
+        app:srcCompat="@drawable/ic_take_picture" />
+
+    <LinearLayout
+        android:id="@+id/btn_flash"
+        style="@style/CameraToolButton"
+        android:layout_width="@dimen/width_tool_btn"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/footer_tools"
+        app:layout_constraintLeft_toLeftOf="@+id/footer_tools"
+        app:layout_constraintRight_toLeftOf="@+id/btn_grid"
+        app:layout_constraintTop_toTopOf="@+id/footer_tools"
+        app:layout_constraintVertical_bias="0.4">
+
+        <ImageView
+            android:id="@+id/img_flash"
+            style="@style/CameraToolImage"
+            android:layout_width="@dimen/size_tool_image"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_flash_auto" />
+
+        <TextView
+            android:id="@+id/text_flash"
+            style="@style/CameraToolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/camera_flash" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_grid"
+        style="@style/CameraToolButton"
+        android:layout_width="@dimen/width_tool_btn"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/btn_flash"
+        app:layout_constraintRight_toLeftOf="@+id/btn_take_photo"
+        app:layout_constraintTop_toTopOf="@+id/btn_flash">
+
+        <ImageView
+            android:id="@+id/img_grid"
+            style="@style/CameraToolImage"
+            android:layout_width="@dimen/size_tool_image"
+            android:layout_height="@dimen/size_tool_image"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_grid_off" />
+
+        <TextView
+            android:id="@+id/text_grid"
+            style="@style/CameraToolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/camera_grid" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_batch"
+        style="@style/CameraToolButton"
+        android:layout_width="@dimen/width_tool_btn"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/btn_take_photo"
+        app:layout_constraintRight_toLeftOf="@+id/btn_single"
+        app:layout_constraintTop_toTopOf="@+id/btn_flash">
+
+        <ImageView
+            android:id="@+id/img_batch"
+            style="@style/CameraToolImage"
+            android:layout_width="@dimen/size_tool_image"
+            android:layout_height="@dimen/size_tool_image"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_batch_off" />
+
+        <TextView
+            android:id="@+id/text_batch"
+            style="@style/CameraToolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/camera_batch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_single"
+        style="@style/CameraToolButton"
+        android:layout_width="@dimen/width_tool_btn"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/btn_batch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_flash">
+
+        <ImageView
+            android:id="@+id/img_single"
+            style="@style/CameraToolImage"
+            android:layout_width="@dimen/size_tool_image"
+            android:layout_height="@dimen/size_tool_image"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_single_on" />
+
+        <TextView
+            android:id="@+id/text_single"
+            style="@style/CameraToolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/camera_single" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_finish"
+        style="@style/CameraToolButton"
+        android:layout_width="@dimen/width_tool_btn"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@+id/btn_single"
+        app:layout_constraintTop_toTopOf="@+id/btn_flash">
+
+        <ImageView
+            android:id="@+id/img_finish"
+            style="@style/CameraToolImage"
+            android:layout_width="@dimen/size_tool_image"
+            android:layout_height="@dimen/size_tool_image"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            app:srcCompat="@drawable/ic_finish" />
+
+        <TextView
+            android:id="@+id/text_finish"
+            style="@style/CameraToolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/str_sign_edit_finish" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/batch_mode_preview_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="#e5e5e5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_flash"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_flash"
+        app:layout_constraintRight_toRightOf="@+id/btn_flash" />
+
+    <TextView
+        android:id="@+id/batch_mode_preview_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_camera_num"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/batch_mode_preview_image"
+        app:layout_constraintLeft_toRightOf="@+id/batch_mode_preview_image"
+        app:layout_constraintRight_toRightOf="@+id/batch_mode_preview_image"
+        app:layout_constraintTop_toTopOf="@+id/batch_mode_preview_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

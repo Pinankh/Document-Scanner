@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_topbar" android:background="@color/colorPrimary" android:padding="10dp" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <ImageView android:id="@+id/iv_text_cancel" android:background="?attr/selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:adjustViewBounds="true" app:srcCompat="@drawable/icon_cancel"/>
+        <TextView android:textSize="18sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/str_sign_text" android:layout_toRightOf="@+id/iv_text_cancel" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/iv_text_done" android:background="?attr/selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:adjustViewBounds="true" android:layout_alignParentRight="true" app:srcCompat="@drawable/ic_done"/>
+    </RelativeLayout>
+    <EditText android:textSize="20sp" android:gravity="left" android:id="@+id/et_sign_text" android:background="@null" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll_bottombar" android:layout_below="@+id/rl_topbar"/>
+    <View android:background="@color/color_signature_border" android:layout_width="match_parent" android:layout_height="1dp" android:layout_above="@+id/ll_bottombar"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_bottombar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/color_signature_border" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <RelativeLayout android:id="@+id/rl_text_color_blue" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_sign_color_blue_20dp" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <View android:background="@color/color_signature_border" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <RelativeLayout android:id="@+id/rl_text_color_red" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_sign_color_red_20dp" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <View android:background="@color/color_signature_border" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <RelativeLayout android:id="@+id/rl_text_color_black" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_sign_color_black_20dp" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <View android:background="@color/color_signature_border" android:layout_width="1dp" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View android:background="@color/color_signature_border" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

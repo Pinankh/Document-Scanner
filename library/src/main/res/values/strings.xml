@@ -1,0 +1,15 @@
+<resources>
+    <string name="about_page_description" translatable="false"><b>Ashiti Infotech</b> is an open content sharing protocol letting different
+        types of mobile application to communicate and share content. It is secure by default and comes with
+        a consistent set of APIs. As a developer, you can set it up easily and add content-sharing functionality
+        to your app!</string>
+    <string name="about_contact_us">Contact us</string>
+    <string name="about_instagram">Follow us on Instagram</string>
+    <string name="about_facebook">Like us on Facebook</string>
+    <string name="about_play_store">Rate us on the Play Store</string>
+    <string name="about_youtube">Watch us on Youtube</string>
+    <string name="about_twitter">Follow us on Twitter</string>
+    <string name="about_github">Fork us on GitHub</string>
+    <string name="about_website">Visit our website</string>
+
+</resources>

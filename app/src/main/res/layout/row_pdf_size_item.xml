@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="50dp">
+    <ImageView android:id="@+id/iv_pdf_size_remove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_centerVertical="true" android:contentDescription="@string/str_delete" app:srcCompat="@drawable/icon_remove_pdf_size"/>
+    <TextView android:textStyle="bold" android:textColor="@color/blackOlive" android:id="@+id/tv_pdf_size_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="A5" android:layout_toRightOf="@+id/iv_pdf_size_remove" android:layout_centerVertical="true"/>
+    <View android:background="@color/colorBGGray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="15dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#00bfa5"/>
+            <size android:height="80dp" android:width="80dp"/>
+        </shape>
+    </item>
+    <item android:left="@dimen/border_camera_button" android:top="@dimen/border_camera_button" android:right="@dimen/border_camera_button" android:bottom="@dimen/border_camera_button">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorBackgroundCameraButtonPressed"/>
+        </shape>
+    </item>
+</layer-list>

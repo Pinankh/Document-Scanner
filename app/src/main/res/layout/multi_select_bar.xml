@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+    <ImageView android:id="@+id/btn_bar_back" android:background="@drawable/touch_effect" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="12dp" android:layout_centerVertical="true" app:srcCompat="@drawable/ic_back_long"/>
+    <RelativeLayout android:id="@+id/rl_tv_bar_select_all" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toLeftOf="@+id/btn_bar_select_all"/>
+    <RelativeLayout android:id="@+id/btn_bar_select_all" android:background="@drawable/touch_effect" android:layout_width="?attr/actionBarSize" android:layout_height="?attr/actionBarSize" android:layout_alignParentRight="true">
+        <ImageView android:id="@+id/iv_bar_select_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:srcCompat="@drawable/icon_toolbar_check_off"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,4 @@
+include ':app'
+rootProject.name = "PaperScanner"
+include ':matisse'
+include ':library'

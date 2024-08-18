@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_tag" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/tv_tag_mark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="T" android:layout_centerVertical="true" android:textAllCaps="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/colorSettingItemColor2" android:id="@+id/tv_tag_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:text="Tag Name" android:layout_centerVertical="true"/>
+        <TextView android:id="@+id/tv_tag_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:text="1" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <View android:background="@color/colorBGGray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

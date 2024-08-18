@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_file"
+        app:shapeAppearanceOverlay="@style/customRounded15ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:strokeColor="@color/appbid_selected"
+        app:strokeWidth="1dp"
+        android:src="@drawable/bg_doc_upload" />
+
+    <TextView
+        android:id="@+id/txt_file_num"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/background_num"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="11sp" />
+
+
+</RelativeLayout>

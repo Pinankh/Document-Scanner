@@ -1,0 +1,50 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  Copyright 2017 Zhihu Inc.
+4
+5  Licensed under the Apache License, Version 2.0 (the "License");
+6  you may not use this file except in compliance with the License.
+7  You may obtain a copy of the License at
+8
+9  http://www.apache.org/licenses/LICENSE-2.0
+10
+11  Unless required by applicable law or agreed to in writing, software
+12  distributed under the License is distributed on an "AS IS" BASIS,
+13  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14  See the License for the specific language governing permissions and
+15  limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    xmlns:tools="http://schemas.android.com/tools"
+19    package="com.zhihu.matisse" >
+20
+21    <uses-sdk
+22        android:minSdkVersion="14"
+22-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+23        android:targetSdkVersion="32" />
+23-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+24
+25    <uses-permission
+25-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:22:5-23:40
+26        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+26-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:22:22-78
+27        tools:ignore="ScopedStorage" />
+27-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:23:9-37
+28    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+28-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:24:5-79
+28-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:24:22-77
+29
+30    <application>
+30-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:26:5-30:19
+31        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
+31-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:27:9-72
+31-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:27:19-70
+32        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
+32-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:28:9-86
+32-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:28:19-84
+33        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
+33-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:29:9-89
+33-->F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:29:19-87
+34    </application>
+35
+36</manifest>

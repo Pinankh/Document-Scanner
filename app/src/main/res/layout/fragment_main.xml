@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/doc_background">
+
+    <include
+        android:id="@+id/secondbar"
+        layout="@layout/second_tool_bar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivEmptyBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStartScan"
+        android:alpha="0.2"
+        app:srcCompat="@drawable/home_bg" />
+
+    <include
+        android:id="@+id/multi_select_bottom_bar"
+        layout="@layout/multi_select_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/footer_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ListView
+        android:id="@+id/document_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/multi_select_bottom_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondbar"
+        app:layout_constraintWidth_default="spread" />
+
+    <TextView
+        android:id="@+id/tvStartScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/str_start_scanning"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rlBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_floating_button"
+            app:fabCustomSize="80dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="16dp"
+            app:maxImageSize="35dp"
+            app:borderWidth="2dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_camera" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_floating_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_camera"
+            app:layout_constraintRight_toLeftOf="@+id/btn_camera"
+            app:layout_constraintTop_toTopOf="@+id/btn_camera"
+            app:srcCompat="@drawable/ic_qr_scan" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/bg_floating_button"
+            android:clickable="true"
+            android:contentDescription="@string/action_import_from_gallery"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_camera"
+            app:layout_constraintLeft_toRightOf="@+id/btn_camera"
+            app:layout_constraintTop_toTopOf="@+id/btn_camera"
+            app:srcCompat="@drawable/ic_gallery" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

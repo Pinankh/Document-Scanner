@@ -1,0 +1,51 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:17:1-31:12
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:17:1-31:12
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:17:1-31:12
+	package
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:20:5-32
+		INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+		INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:19:5-51
+	xmlns:android
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:18:5-63
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:22:5-23:40
+	tools:ignore
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:23:9-37
+	android:name
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:22:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:24:22-77
+application
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:26:5-30:19
+activity#com.zhihu.matisse.ui.MatisseActivity
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:27:9-72
+	android:name
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:27:19-70
+activity#com.zhihu.matisse.internal.ui.AlbumPreviewActivity
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:28:9-86
+	android:name
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:28:19-84
+activity#com.zhihu.matisse.internal.ui.SelectedPreviewActivity
+ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:29:9-89
+	android:name
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml:29:19-87
+uses-sdk
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+		INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+		ADDED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml
+		INJECTED from F:\pinal development\DocScanner sale\matisse\src\main\AndroidManifest.xml

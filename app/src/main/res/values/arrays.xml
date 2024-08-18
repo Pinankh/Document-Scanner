@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="nav_item_activity_titles">
+        <item>My docs</item>
+        <item>Shared with me</item>
+        <item>Tags</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+    </array>
+    <array name="setting_scan_quality_array">
+        <item>@string/setting_scan_quality_low</item>
+        <item>@string/setting_scan_quality_medium</item>
+        <item>@string/setting_scan_quality_high</item>
+        <item>@string/setting_scan_quality_max</item>
+    </array>
+    <array name="setting_share_quality_array">
+        <item>@string/setting_scan_quality_low</item>
+        <item>@string/setting_scan_quality_medium</item>
+        <item>@string/setting_scan_quality_regular</item>
+        <item>@string/setting_scan_quality_max</item>
+    </array>
+    <array name="sortIcons">
+        <item>@drawable/ic_sort_up</item>
+        <item>@drawable/ic_sort_down</item>
+        <item>@drawable/ic_sort_up</item>
+        <item>@drawable/ic_sort_down</item>
+    </array>
+    <array name="sortLabels">
+        <item>@string/sort_create_asec</item>
+        <item>@string/sort_create_desc</item>
+        <item>@string/sort_name_a_z</item>
+        <item>@string/sort_name_z_a</item>
+    </array>
+    <array name="spinner_data">
+        <item>My docs</item>
+        <item>Marked docs</item>
+        <item>ID Card</item>
+    </array>
+    <array name="wakeads_months">
+        <item />
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>Jule</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+</resources>

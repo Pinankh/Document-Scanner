@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_topbar" android:background="@color/colorPrimary" android:padding="10dp" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <ImageView android:id="@+id/iv_free_cancel" android:background="?attr/selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:adjustViewBounds="true" app:srcCompat="@drawable/icon_cancel"/>
+        <TextView android:textSize="18sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/str_sign_freestytle" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/iv_free_done" android:background="?attr/selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:adjustViewBounds="true" android:layout_alignParentRight="true" app:srcCompat="@drawable/ic_done"/>
+    </RelativeLayout>
+    <com.github.gcacace.signaturepad.views.SignaturePad android:id="@+id/sp_pad" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/rl_sign_control" android:layout_below="@+id/rl_topbar"/>
+    <View android:background="@color/color_signature_border" android:layout_width="match_parent" android:layout_height="1dp" android:layout_above="@+id/rl_sign_control"/>
+    <RelativeLayout android:id="@+id/rl_sign_control" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/colorAccent" android:id="@+id/tv_sign_clear" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_sign_clear" android:layout_centerVertical="true" android:contentDescription="@string/str_sign_clear"/>
+        <RelativeLayout android:id="@+id/rl_sign_color_black" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/rl_sign_color_blue" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/iv_sign_outline_black" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_sign_color_outline" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/iv_sign_color_black" android:padding="2dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_sign_color_black" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_sign_color_blue" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/rl_sign_color_red" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/iv_sign_outline_blue" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_sign_color_outline" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/iv_sign_color_blue" android:padding="2dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_sign_color_blue" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_sign_color_red" android:layout_width="30dp" android:layout_height="30dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/iv_sign_outline_red" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_sign_color_outline" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/iv_sign_color_red" android:padding="2dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_sign_color_red" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/color_signature_border" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
